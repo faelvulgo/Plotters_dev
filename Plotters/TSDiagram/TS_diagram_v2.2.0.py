@@ -14,9 +14,9 @@ class HydrographyDiagram:
         csv_files (list): List of paths to CSV files containing hydrographic data.
         """
         self.data_list = [pd.read_csv(csv_file) for csv_file in csv_files]
-        self.salinity_list = [data['Calc. SALINITY; PSU'].values for data in self.data_list]
-        self.temperature_list = [data['TEMPERATURE;C'].values for data in self.data_list]
-        self.pressure_list = [data['PRESSURE;DBAR'].values for data in self.data_list]
+        self.salinity_list = [data[''].values for data in self.data_list]
+        self.temperature_list = [data[''].values for data in self.data_list]
+        self.pressure_list = [data[''].values for data in self.data_list]
 
     def calculate_potential_density(self):
         """
@@ -66,7 +66,7 @@ class HydrographyDiagram:
             # Assuming csv_file contains the full path to the CSV file
             file_name = os.path.basename(csv_file)  # Extracts the file name from the path
 
-            ax.set_title(f'Diagrama T-S - Radial 3 - {station_number}')
+            ax.set_title(f'Diagrama T-S - {station_number}')
 
             # Set axis limits
             ax.set_xlim(34.32, 37.36)
@@ -77,13 +77,13 @@ class HydrographyDiagram:
 
             # Add water mass labels
             for name, props in water_masses.items():
-                indices = np.where(np.logical_and(data['TEMPERATURE;C'].values > props['T'][0],
-                                                  data['TEMPERATURE;C'].values <= props['T'][1]) &
-                                   np.logical_and(data['Calc. SALINITY; PSU'].values > props['S'][0],
-                                                  data['Calc. SALINITY; PSU'].values <= props['S'][1]))[0]
+                indices = np.where(np.logical_and(data[''].values > props['T'][0],
+                                                  data[''].values <= props['T'][1]) &
+                                   np.logical_and(data[''].values > props['S'][0],
+                                                  data[''].values <= props['S'][1]))[0]
                 if indices.size > 0:
-                    avg_salinity = np.mean(data['Calc. SALINITY; PSU'].values[indices])
-                    avg_temperature = np.mean(data['TEMPERATURE;C'].values[indices])
+                    avg_salinity = np.mean(data[''].values[indices])
+                    avg_temperature = np.mean(data[''].values[indices])
                     ax.text(avg_salinity, avg_temperature, name, fontsize=13, color='black', ha='center', va='center', weight='bold')
 
             plt.tight_layout()
@@ -96,18 +96,10 @@ class HydrographyDiagram:
 
 def main():
     # List of paths to the CSV files
-    csv_files = [
-        '/home/labdino/PycharmProjects/CTDprocessing/dados/DadosHidrografia/04_radial_3/0649_30072019_0718/FILE46_10m.csv',
-        '/home/labdino/PycharmProjects/CTDprocessing/dados/DadosHidrografia/04_radial_3/0650_30072019_0817/FILE47_10m.csv',
-        '/home/labdino/PycharmProjects/CTDprocessing/dados/DadosHidrografia/04_radial_3/0651_30072019_0923/FILE49_10m.csv',
-        '/home/labdino/PycharmProjects/CTDprocessing/dados/DadosHidrografia/04_radial_3/0652_30072019_1031/FILE50_10m.csv',
-        '/home/labdino/PycharmProjects/CTDprocessing/dados/DadosHidrografia/04_radial_3/0654_30072019_1126/FILE53_10m.csv',
-        '/home/labdino/PycharmProjects/CTDprocessing/dados/DadosHidrografia/04_radial_3/0655_30072019_1700/FILE55_10m.csv',
-        '/home/labdino/PycharmProjects/CTDprocessing/dados/DadosHidrografia/04_radial_3/0656_30072019_2242/FILE57_10m.csv'
-    ]
+    csv_files = ['']
 
     # Directory to save the plots
-    save_dir = '/home/labdino/PycharmProjects/CTDprocessing/dados/Plots/TSdiagrams'
+    save_dir = ''
 
     # Create HydrographyDiagram object
     hydro_diagram = HydrographyDiagram(csv_files)
