@@ -34,7 +34,7 @@ class LighterData:
             print(f"Making data lighter for {input_file}...")
             for chunk in pd.read_csv(input_file, skiprows=16, chunksize=self.chunksize):
                 # Exclude non-numeric columns
-                numeric_columns = [col for col in chunk.columns if col != '// timestamp(yyyy-mm-ddTHH:MM:ss.FFF)']
+                numeric_columns = [col for col in chunk.columns if col != '']
 
                 if numeric_columns:
                     # Convert numeric columns to float16
@@ -80,17 +80,17 @@ class DataPlotter:
 
             # Plot temperature over time for the current file using a different color
             ctd_df = ctd_data.copy()  # Make a copy to avoid modifying the original DataFrame
-            ctd_df['// timestamp(yyyy-mm-ddTHH:MM:ss.FFF)'] = pd.to_datetime(
-                ctd_df['// timestamp(yyyy-mm-ddTHH:MM:ss.FFF)'])
+            ctd_df[''] = pd.to_datetime(
+                ctd_df[''])
             print(f'Plotting data from {input_file2}...')
-            plt.plot(ctd_df['// timestamp(yyyy-mm-ddTHH:MM:ss.FFF)'],
-                     ctd_df['    temperature(°C)'],
+            plt.plot(ctd_df[''],
+                     ctd_df[''],
                      label=os.path.basename(input_file2),  # Use the file name as label
                      color=colors[i % len(colors)])  # Cycle through colors list
 
         plt.xlabel('Tempo')
         plt.ylabel('Temperatura (°C)')
-        plt.title('Série Temporal de Temperatura - Cruzeiro 2')
+        plt.title('Série Temporal de Temperatura')
         plt.legend(title='File', bbox_to_anchor=(1.05, 1), loc='upper left')  # Move legend outside the plot
         plt.grid(True)
 
@@ -100,26 +100,10 @@ class DataPlotter:
 
 
 if __name__ == "__main__":
-    '''
-    input_files = [
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_3/01.BoiadeTopo-150m/200428_20200619_2330_150m.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_3/02.CTD2-325m/200427_20200619_2241_325m.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_3/03.CTD3-525m/200426_20200619_2256_525m.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_3/04.CTD4-600m/200429_20200619_2313_600m.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_3/05.CTD5-755m/200425_20200619_2223_755m.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_3/06.CTD6-975m/200423_20200619_2147_975m.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_3/07.BoiadeTopo-1125m/200424_20200619_2205_1125m.csv"
-        ]
+    
+    input_files = ['']
 
-    output_files = [
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_3/01.BoiadeTopo-150m/150m.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_3/02.CTD2-325m/325m.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_3/03.CTD3-525m/525m.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_3/04.CTD4-600m/600m.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_3/05.CTD5-755m/755m.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_3/06.CTD6-975m/975m.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_3/07.BoiadeTopo-1125m/1125m.csv"
-        ]
+    output_files = ['']
 
     lighter = LighterData(
         input_files=input_files,
@@ -127,17 +111,10 @@ if __name__ == "__main__":
     )
 
     lighter.make_data_lighter()
-    '''
-    input_files2 = [
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_2/01.BoiadeTopo-75m/75m_despiked.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_2/02.CTD2-325m/325m_despiked.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_2/03.CTD3-525m/525m_despiked.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_2/04.CTD4-755m/755m_despiked.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_2/05.CTD5-975m/975m_despiked.csv",
-        r"/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_2/06.BoiadeProfundidade-1125m/1125m_despiked.csv"
-    ]
+    
+    input_files2 = ['']
 
-    save_path = r"/dados/Timeseries/temptimecruze2.png"
+    save_path = r""
 
     plotter = DataPlotter(input_files2, save_path)
 
