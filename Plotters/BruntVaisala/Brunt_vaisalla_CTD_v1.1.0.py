@@ -24,15 +24,15 @@ def remove_rows_with_empty_cells(df):
     return df_cleaned
 
 # Create the DataFrame
-data = pd.read_csv('/dados/Cruzeiro_2/06.BoiadeProfundidade-1125m/1125m.csv')
+data = pd.read_csv('')
 
 # Remove rows with empty cells
 df_cleaned = remove_rows_with_empty_cells(data)
 
 # Extract columns from the DataFrame to a NumPy array
-salinity = df_cleaned['    salinity(PSU)'].values
-pressure = df_cleaned['    pressure(dbar)'].values
-temperature = df_cleaned['    temperature(°C)'].values
+salinity = df_cleaned[''].values
+pressure = df_cleaned[''].values
+temperature = df_cleaned[''].values
 
 
 def bruntvaisala():
@@ -74,7 +74,7 @@ def plotvaisala(n2):
     plt.title('Brunt-Väisälä Frequency Profile - Cruise 2 - 1125m')
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig('/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_2/06.BoiadeProfundidade-1125m/bruntvaisala1125m.png', format='png', dpi=900, transparent=False)
+    plt.savefig('', format='png', dpi=900, transparent=False)
     plt.show()
 
 
