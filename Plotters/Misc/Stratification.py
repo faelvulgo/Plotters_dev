@@ -5,16 +5,16 @@ from scipy.interpolate import griddata
 from matplotlib.dates import date2num, num2date
 from matplotlib.ticker import MaxNLocator
 
-data = pd.read_csv('/home/labdino/PycharmProjects/CTDprocessing/dados/01. Dados Brutos/01_radial_1/0626_28072019_1609/FILE1_10m.csv')
+data = pd.read_csv('')
 
 # Convert 'Time' column to numerical values
-data['Time'] = pd.to_datetime(data['Time'])
-data['Time_num'] = date2num(data['Time'])
+data[''] = pd.to_datetime(data[''])
+data[''] = date2num(data[''])
 
 # Generate example data
-depths = data['z'].values
-time = data['Time_num'].values
-temperature = data['TEMPERATURE;C'].values
+depths = data[''].values
+time = data[''].values
+temperature = data[''].values
 
 # Create a meshgrid with regular intervals
 time_grid = np.linspace(time.min(), time.max(), 100)
