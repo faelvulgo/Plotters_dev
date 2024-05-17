@@ -83,21 +83,12 @@ def plot_station_images(ts_diagrams, temp_profiles, brunt_vaisala_freqs):
 
 
 # Example usage:
-ts_diagrams = [r'/home/labdino/PycharmProjects/CTDprocessing/dados/Plots/TSdiagrams/watermass_0626.png',
-               r'/home/labdino/PycharmProjects/CTDprocessing/dados/Plots/TSdiagrams/watermass_0627.png',
-               r'/home/labdino/PycharmProjects/CTDprocessing/dados/Plots/TSdiagrams/watermass_0628.png',
-               r'/home/labdino/PycharmProjects/CTDprocessing/dados/Plots/TSdiagrams/watermass_0629.png']
+ts_diagrams = [r'']
 
-temp_profiles = [r'/home/labdino/PycharmProjects/CTDprocessing/dados/Plots/PerfisTS/PerfilTS_0626.png',
-                 r'/home/labdino/PycharmProjects/CTDprocessing/dados/Plots/PerfisTS/PerfilTS_0627.png',
-                 r'/home/labdino/PycharmProjects/CTDprocessing/dados/Plots/PerfisTS/PerfilTS_0628.png',
-                 r'/home/labdino/PycharmProjects/CTDprocessing/dados/Plots/PerfisTS/PerfilTS_0629.png']
+temp_profiles = [r'']
 
-brunt_vaisala_freqs = [r'/home/labdino/PycharmProjects/CTDprocessing/dados/Plots/BruntVaisala/bruntvaisala_10m_0626.png',
-                       r'/home/labdino/PycharmProjects/CTDprocessing/dados/Plots/BruntVaisala/bruntvaisala_10m_0627.png',
-                       r'/home/labdino/PycharmProjects/CTDprocessing/dados/Plots/BruntVaisala/bruntvaisala_10m_0628.png',
-                       r'/home/labdino/PycharmProjects/CTDprocessing/dados/Plots/BruntVaisala/bruntvaisala_10m_0629.png']
+brunt_vaisala_freqs = [r'']
 
-save_dir = r'/home/labdino/PycharmProjects/CTDprocessing/dados/Plots/StationPlots'
+save_dir = r''
 
 plot_station_images(ts_diagrams, temp_profiles, brunt_vaisala_freqs)
