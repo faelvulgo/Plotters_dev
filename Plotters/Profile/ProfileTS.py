@@ -35,9 +35,9 @@ class HydrographyPlotter:
         df = pd.read_csv(csv_file)
 
         # Extract relevant columns
-        temperature = df['TEMPERATURE;C']
-        salinity = df['Calc. SALINITY; PSU']
-        depth = df['z']
+        temperature = df['']
+        salinity = df['']
+        depth = df['']
 
         # Create the plot
         fig, ax1 = plt.subplots(figsize=(10, 6))
@@ -56,7 +56,7 @@ class HydrographyPlotter:
         ax1.invert_yaxis()
 
         # Set the title
-        plt.title(f'Perfil de Temperatura e Salinidade - Radial LADCP - {station_number}')
+        plt.title(f'Perfil de Temperatura e Salinidade - {station_number}')
 
         # Set the y-axis label
         plt.ylabel('Profundidade (m)')
@@ -73,14 +73,10 @@ class HydrographyPlotter:
 
 def main():
     # List of paths to the CSV files
-    csv_files = [
-        '/home/labdino/PycharmProjects/CTDprocessing/dados/DadosHidrografia/02_radial_LADCP/0633_29072019_1700/FILE11_10m.csv',
-        '/home/labdino/PycharmProjects/CTDprocessing/dados/DadosHidrografia/02_radial_LADCP/0634_29072019_1845/FILE13_10m.csv',
-        '/home/labdino/PycharmProjects/CTDprocessing/dados/DadosHidrografia/02_radial_LADCP/0635_29072019_2033/FILE15_10m.csv'
-    ]
+    csv_files = ['']
 
     # Directory to save the plots
-    save_dir = '/home/labdino/PycharmProjects/CTDprocessing/dados/Plots/PerfisTS'
+    save_dir = ''
 
     # Create HydrographyPlotter object
     plotter = HydrographyPlotter(csv_files)
