@@ -63,7 +63,7 @@ def plotvaisala(n2):
     plt.title('Brunt-Väisälä Frequency Profile - Cruise 2 - 525m')
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig('/home/labdino/PycharmProjects/Internal_waves/dados/Cruzeiro_2/03.CTD3-525m/bruntvaisala525m.png', format='png', dpi=900, transparent=False)
+    plt.savefig('', format='png', dpi=900, transparent=False)
     plt.show()
 
 
@@ -85,15 +85,15 @@ def timecounter():
 
 
 # Create the DataFrame
-df = pd.read_csv('/dados/Cruzeiro_2/03.CTD3-525m/525m.csv')
+df = pd.read_csv('')
 
 # Remove rows with empty cells
 new_df = remove_rows_with_empty_cells(df)
 print(len(df))
 print(len(new_df))
 # Extract columns from the DataFrame to a NumPy array
-salinity = new_df['    salinity(PSU)'].values
-pressure = new_df['    pressure(dbar)'].values
-temperature = new_df['    temperature(°C)'].values
+salinity = new_df[''].values
+pressure = new_df[''].values
+temperature = new_df[''].values
 
 timecounter()
