@@ -31,3 +31,11 @@ Scripts for plotting data that I developed according to need.
 #### ImagePlot:
 
 ![Concatenação de PLots](https://github.com/faelvulgo/Plotters_dev/blob/main/Exemplos/plot.png?raw=true)
+
+## License
+
+This project is proprietary software. You are welcome to download and use the code strictly for **personal and private purposes**. 
+
+However, commercial use, modification for public distribution, and direct redistribution of the source code are **strictly prohibited**. Any sharing must be done by linking directly to this original repository.
+
+For full legal terms, please refer to the [LICENSE](LICENSE) file.
