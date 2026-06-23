@@ -1,14 +1,14 @@
 <h1 align="center"> Plotters </h1>
 
-# Descrição
-Scripts para plotagem de dados que foram desenvolvidos por mim de acordo com a necessidade.
+# Description
+Scripts for plotting data that I developed according to need.
 
-# Conteúdo
-- Profiles: scripts para a plotagem de perfis de temperatura e salinidade
-- TSDiagram: scripts para a plotagem de diagramas T-S com identificação de massas de água (Atlântico Sul)
-- TimeSeries: scripts para plotagem de séries temporais
-- BruntVaisala: script para calcular e plotar a curva de Brunt-Väisälä
-- Misc: scripts variados para plotagem de dados (plotagem 3D, concatenador de plots, etc)
+# Content
+- Profiles: scripts for plotting temperature and salinity profiles
+- TSDiagram: scripts for plotting T-S diagrams with water mass identification (South Atlantic)
+- TimeSeries: scripts for plotting time series
+- BruntVaisala: script to calculate and plot the Brunt-Vaisala curve
+- Misc: various scripts for plotting data (3D plotting, plot concatenator, etc.)
 
 # Exemplos
 ### Profiles:
