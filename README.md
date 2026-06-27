@@ -32,6 +32,9 @@ Scripts for plotting data that I developed according to need.
 
 ![Concatenação de PLots](https://github.com/faelvulgo/Plotters_dev/blob/main/Exemplos/plot.png?raw=true)
 
+#### Stratification 3D:
+![Stratification 3D](https://github.com/faelvulgo/Plotters_dev/blob/main/Exemplos/Stratification%203D.png?raw=true)
+
 ## License
 
 This project is proprietary software. You are welcome to download and use the code strictly for **personal and private purposes**. 
