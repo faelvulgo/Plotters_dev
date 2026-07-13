@@ -6,21 +6,11 @@ import os
 class LighterData:
     """
     A class to lighten data by converting numeric columns to float16.
-
-    Attributes:
-        input_files (list of str): List of input file paths.
-        output_files (list of str): List of output file paths.
-        chunksize (int): Size of data chunks to process at a time.
     """
 
     def __init__(self, input_files, output_files, chunksize=500):
         """
         Initializes LighterData with input and output file paths and chunk size.
-
-        Args:
-            input_files (list of str): List of input file paths.
-            output_files (list of str): List of output file paths.
-            chunksize (int, optional): Size of data chunks to process at a time. Default is 500.
         """
         self.input_files = input_files
         self.output_files = output_files
@@ -49,19 +39,11 @@ class LighterData:
 class DataPlotter:
     """
     A class to plot temperature over time from multiple files.
-
-    Attributes:
-        input_files2 (list of str): List of file paths containing processed data.
-        save_path (str): File path to save the plot.
     """
 
     def __init__(self, input_files2, save_path=None):
         """
         Initializes DataPlotter with input file paths and save path for the plot.
-
-        Args:
-            input_files2 (list of str): List of file paths containing processed data.
-            save_path (str, optional): File path to save the plot. Default is None.
         """
         self.input_files2 = input_files2
         self.save_path = save_path
