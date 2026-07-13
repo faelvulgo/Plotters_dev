@@ -8,17 +8,9 @@ def plot_station_images(ts_diagrams, temp_profiles, brunt_vaisala_freqs):
     """
     Plot T-S diagrams, temperature profiles, and Brunt-Vaisala frequency plots
     for each station, side by side.
-
-    Parameters:
-    ts_diagrams (list): List of file paths to T-S diagram images
-    temp_profiles (list): List of file paths to temperature profile images
-    brunt_vaisala_freqs (list): List of file paths to Brunt-Vaisala frequency images
-
-    Returns:
-    None
     """
     # Create a dictionary to store the images for each station
-    station_data = {}  # {station_num: {'ts_diagram': file, 'temp_profile': file,...}}
+    station_data = {}
 
     # Iterate over the T-S diagrams and extract station numbers
     for file in ts_diagrams:
