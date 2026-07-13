@@ -8,10 +8,7 @@ import numpy as np
 def remove_rows_with_empty_cells(df):
     """
     Remove rows with empty cells (NaN values) from a DataFrame.
-
-    Parameters:
-    df (pandas.DataFrame): Input DataFrame.
-
+    
     Returns:
     pandas.DataFrame: Cleaned DataFrame with rows containing empty cells removed.
     """
@@ -50,7 +47,6 @@ def plotvaisala(n2):
     """
     Plot the Brunt-Väisälä frequency.
 
-    Parameters:
     n2 (tuple): A tuple containing the Brunt-Väisälä frequency and corresponding pressure values.
     """
     pressures = n2[1]  # Extract pressures
