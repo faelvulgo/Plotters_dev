@@ -4,6 +4,9 @@ import os
 
 
 def plot_temperature_over_time(input_files):
+    """
+    Plot a temperature time series.
+    """
     colors = ['blue', 'green', 'red', 'purple', 'orange', 'cyan', 'magenta']
 
     plt.figure(figsize=(10, 6))  # Create a single figure for all plots
