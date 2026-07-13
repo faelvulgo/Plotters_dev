@@ -9,9 +9,6 @@ class HydrographyDiagram:
     def __init__(self, csv_files):
         """
         Initialize the HydrographyDiagram object with data from CSV files.
-
-        Args:
-        csv_files (list): List of paths to CSV files containing hydrographic data.
         """
         self.data_list = [pd.read_csv(csv_file) for csv_file in csv_files]
         self.salinity_list = [data[''].values for data in self.data_list]
@@ -29,9 +26,6 @@ class HydrographyDiagram:
     def plot_diagram(self, save_dir, csv_files):
         """
         Plot the hydrography diagram and save it in a directory.
-
-        Args:
-        save_dir (str): Path to the directory to save the plots.
         """
         water_masses = {
             'AT': {'T': (20, np.inf), 'S': (36, np.inf)},
