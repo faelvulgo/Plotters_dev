@@ -6,18 +6,12 @@ class HydrographyPlotter:
     def __init__(self, csv_files):
         """
         Initialize HydrographyPlotter object with a list of CSV file paths.
-
-        Args:
-        csv_files (list): List of paths to CSV files containing hydrographic data.
         """
         self.csv_files = csv_files
 
     def plot_profiles(self, save_dir):
         """
         Plot temperature and salinity profiles for each CSV file and save them in the specified directory.
-
-        Args:
-        save_dir (str): Path to the directory to save the plots.
         """
         for csv_file in self.csv_files:
             station_number = os.path.basename(os.path.dirname(csv_file)).split('_')[0]
@@ -26,11 +20,6 @@ class HydrographyPlotter:
     def _plot_profile(self, csv_file, save_dir, station_number):
         """
         Plot temperature and salinity profile from a single CSV file.
-
-        Args:
-        csv_file (str): Path to the CSV file containing hydrographic data.
-        save_dir (str): Path to the directory to save the plot.
-        station_number (str): Station number extracted from the folder name.
         """
         df = pd.read_csv(csv_file)
 
